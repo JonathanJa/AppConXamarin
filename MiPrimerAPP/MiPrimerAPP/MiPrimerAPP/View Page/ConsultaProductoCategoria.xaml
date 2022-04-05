@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Producto x Categoria"
+             x:Class="MiPrimerAPP.View_Page.ConsultaProductoCategoria">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker ItemsSource="{Binding oConsultaProductoCategoriaModel.listaCategoria}"
+                    SelectedItem="{Binding oConsultaProductoCategoriaModel.NombreCategoria}"
+                    x:Name="pickerCategoria"
+                    Title="--Seleccione--"
+                    SelectedIndexChanged="pickerCategoria_SelectedIndexChanged"/>
+            <ScrollView >
+                <RefreshView IsRefreshing="{Binding oConsultaProductoCategoriaModel.OCategoriaModel.IsLoading }" x:Name="ltsProducto" >
+                    <CollectionView  ItemsSource="{Binding oConsultaProductoCategoriaModel.listaProductos}" Margin="10,10,10,0">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="5"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                    <Frame BackgroundColor="Aqua" HasShadow="True" Margin="0,0,0,10" CornerRadius="20">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="2*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+
+                                            <Label Text="{Binding nombre,StringFormat='Nombre Producto: {0}'}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
+                                   HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                            <Label Text="{Binding precio,StringFormat='Precio: {0}'}" Grid.Column="0" Grid.Row="1" 
+                                   HorizontalTextAlignment="Center"/>
+                                            <Label Text="{Binding stock,StringFormat='Stock: {0}'}" Grid.Column="1" Grid.Row="1" 
+                                   HorizontalTextAlignment="Center"/>
+                                            <Label Text="{Binding nombrecategoria,StringFormat='Categoria: {0}'}" Grid.Column="2" Grid.Row="1" 
+                                   HorizontalTextAlignment="Center"/>
+                                        </Grid>
+                                    </Frame>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </RefreshView>
+                
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Menu"
+             x:Class="MiPrimerAPP.View_Page.Menu">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bienvenidos al Sistema" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" />
+            <ListView ItemsSource="{Binding oEntityCLS.listaMenu}" Margin="0,15" x:Name="lstmenu" ItemTapped="lstmenu_ItemTapped">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Start">
+                                    <Image Source="{Binding NombreIcono}"/>
+                                    <Label Text="{Binding NombreItem}" VerticalOptions="Center"/>
+                                </StackLayout>
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

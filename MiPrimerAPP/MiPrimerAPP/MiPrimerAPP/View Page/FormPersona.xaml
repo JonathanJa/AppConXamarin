@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding titulo}"
+             x:Class="MiPrimerAPP.View_Page.FormPersona">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="Nombre"/>
+                <Entry Keyboard="Text" Text="{Binding oEntityCLS.oPersonaCLS.nombre}"/>
+                <Label Text="Apellido Paterno"/>
+                <Entry Keyboard="Text" Text="{Binding oEntityCLS.oPersonaCLS.appaterno}"/>
+                <Label Text="Apellido Materno"/>
+                <Entry Keyboard="Text" Text="{Binding oEntityCLS.oPersonaCLS.apmaterno}"/>
+                <Label Text="Telefono"/>
+                <Entry Keyboard="Telephone" Text="{Binding oEntityCLS.oPersonaCLS.telefono}"/>
+                <Label Text="Correo"/>
+                <Entry Keyboard="Email" Text="{Binding oEntityCLS.oPersonaCLS.correo}"/>
+                <Label Text="Fecha Nacimiento"/>
+                <DatePicker Format="dd/MM/yyyy" MinimumDate="01/01/1900" Date="{Binding oEntityCLS.oPersonaCLS.fechanacimientodate}"/>
+                <StackLayout Orientation="Horizontal" Padding="0,0,0,20">
+                    <Label Text="Tiene Usuario" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                    <Switch IsToggled="{Binding oEntityCLS.oPersonaCLS.isTieneusuario}" x:Name="swichTieneUsuario" Toggled="swichTieneUsuario_Toggled"/>
+                </StackLayout>
+                <StackLayout IsVisible="{Binding oEntityCLS.IsVisibleButton}" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Aceptar" BackgroundColor="Green" Clicked="Button_Clicked"/>
+                    <Button Text="Regresar" BackgroundColor="Red" Clicked="Button_Clicked_1"/>
+                </StackLayout>
+                <ScrollView>
+                    <StackLayout IsVisible="{Binding oEntityCLS.IsVisible}" Padding="0,0,0,20">
+                        <Frame BackgroundColor="Teal">
+                            <Label Text="Usuario" HorizontalTextAlignment="center" TextColor="White" FontSize="18"/>
+                        </Frame>
+                        <Label Text="Usuario"/>
+                        <Entry Keyboard="Text" Text="{Binding oEntityCLS.oPersonaCLS.nombreusuario}"/>
+                        <Label Text="Tipo Usuario"/>
+                        <Picker
+                Title="----seleccione----"
+                ItemsSource="{Binding listaPicketTipoUsuario}"
+                    SelectedItem="{Binding oEntityCLS.oPersonaCLS.nombretipousuario}"/>
+                        <ScrollView>
+                            <StackLayout IsVisible="{Binding oEntityCLS.IsVisibleContra}">
+                                <Label Text="Contraseña"/>
+                                <Entry Keyboard="Text" IsPassword="True" Text="{Binding oEntityCLS.oPersonaCLS.contra }"/>
+                            </StackLayout>
+                            
+                        </ScrollView>
+                        <ScrollView>
+                        <StackLayout IsVisible="{Binding oEntityCLS.IsVisible}" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Button Text="Aceptar" BackgroundColor="Green" Clicked="Button_Clicked"/>
+                            <Button Text="Regresar" BackgroundColor="Red" Clicked="Button_Clicked_1"/>
+                        </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                    
+                </ScrollView>
+                
+            </StackLayout>
+           
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.View_Page.TipoUsuario">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolBarRegis" Clicked="toolBarRegis_Clicked"  IconImageSource="ic_agregar.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Grid Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Text="id" Grid.Column="0"/>
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Text="Nombre" Grid.Column="1"/>
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" Text="Operacion" Grid.Column="2"/>
+            </Grid>
+            <ListView ItemsSource="{Binding oEntityCLS.listaTipoUsuario}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="6*" />
+                                    <ColumnDefinition Width="3*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding iidtipousuario}" Grid.Column="0"/>
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding nombre}" Grid.Column="1"/>
+                                <StackLayout Grid.Column="2" Orientation="Horizontal">
+                                    <ImageButton Source="ic_editar.png" x:Name="btnEditar" Clicked="btnEditar_Clicked"/>
+                                    <ImageButton Source="ic_delete.png"/>
+                                </StackLayout>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

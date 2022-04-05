@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding titulo}"
+             x:Class="MiPrimerAPP.View_Page.FormCategoria">
+    <ContentPage.Content>
+        <StackLayout x:Name="limpiarCategoria" Margin="5">
+            
+            <Label Text="Nombre Categoria" />
+            <Entry Text="{Binding oCategoriaCLS.nombre}" ClassId="limpiar obligatorio sle" class="nombre"/>
+            <Label Text="Descripcion Categoria" />
+            <Editor Text="{Binding oCategoriaCLS.descripcion}" HeightRequest="100" ClassId="limpiar obligatorio slcenb" class="Descripcion"/>
+            <Label Text="Seleccione una imagen"/>
+            <Image class="Imagen" ClassId="limpiar obligatorio" HeightRequest="150" Source="{Binding oCategoriaModel.Image}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="imagePreviewCategoria" Tapped="imagePreviewCategoria_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Aceptar" x:Name="btnAceptar" Clicked="btnAceptar_Clicked" BackgroundColor="Green" TextColor="White"/>
+                <Button Text="Atras" x:Name="btnAtras" Clicked="btnAtras_Clicked" BackgroundColor="red" TextColor="White"/>
+                <Button Text="Limpiar" x:Name="btnLimpiar" Clicked="btnLimpiar_Clicked" BackgroundColor="blue" TextColor="White"/>
+            </StackLayout>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.App">
+    <Application.Resources>
+        <x:String x:Key="GetCategoria">http://juan21-001-site1.ctempurl.com/api/categoria</x:String>
+        <x:String x:Key="GetProducto">http://juan21-001-site1.ctempurl.com/api/producto</x:String>
+        <x:String x:Key="GetMarca">http://juan21-001-site1.ctempurl.com/api/marca</x:String>
+        <x:String x:Key="GetPersona">http://juan21-001-site1.ctempurl.com/api/persona</x:String>
+        <x:String x:Key="GetCategoriaMarca">http://juan21-001-site1.ctempurl.com/api/categoriamarca</x:String>
+        <x:String x:Key="GetTipoUsuario">http://juan21-001-site1.ctempurl.com/api/tipousuario</x:String>
+        <x:String x:Key="GetPagina">http://juan21-001-site1.ctempurl.com/api/pagina</x:String>
+        <x:String x:Key="GetUsuario">http://juan21-001-site1.ctempurl.com/api/usuario</x:String>
+        <x:String x:Key="GetVenta">http://juan21-001-site1.ctempurl.com/api/venta</x:String>
+
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.View_Page.Pedido">
+    <ContentPage.Content>
+        
+            
+                <StackLayout Margin="5">
+                   
+                    <CollectionView ItemsSource="{Binding oEntityCLS.listaProductos }">
+                <CollectionView.Header>
+                    <Grid ColumnDefinitions="2*,*,*">
+                        <Label Text="Operaciones" Grid.Column="0" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="Nombre" Grid.Column="1" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="Precio" Grid.Column="3" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="Cantidad" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    </Grid>
+                </CollectionView.Header>
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="3"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="AliceBlue" HasShadow="True" Margin="0,0,0,5" CornerRadius="10">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                             <ColumnDefinition Width="*"/>
+
+                                </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                                             <ImageButton Source="ic_delete.png" x:Name="btnEliminar" Clicked="btnEliminar_Clicked" WidthRequest="50" HeightRequest="50"/>
+                                        </StackLayout>
+                                        <Label Text="{Binding nombre}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding precio}" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding cantidad}" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+
+                            </Grid>
+
+                                </Frame>
+                                
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Text="Total" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"  VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                        <Label Text="{Binding  oEntityCLS.oVentasCLS.total}" BackgroundColor="Blue" TextColor="White"  Grid.Column="3" Grid.Row="0"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                        <Button Text="Guardar" Background="green" x:Name="btnGuardar" Clicked="btnGuardar_Clicked" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" TextColor="White"/>
+
+                    </Grid>
+
+                </CollectionView.Footer>
+                        
+                    </CollectionView>
+
+                
+                    
+                </StackLayout>
+            
+        
+    </ContentPage.Content>
+</ContentPage>

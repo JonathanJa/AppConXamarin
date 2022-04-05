@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding titulo}"
+             x:Class="MiPrimerAPP.View_Page.FormPagina">
+    <ContentPage.Content>
+        <StackLayout x:Name="limpiarPagina" Margin="5">
+
+            <Label Text="Nombre" />
+            <Entry Text="{Binding oPaginaCLS.nombre}" ClassId="limpiar obligatorio" class="nombre"/>
+            <Label Text="Icono" />
+            <Editor Text="{Binding oPaginaCLS.nombreicono}" HeightRequest="100" ClassId="limpiar obligatorio" class="icono"/>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Aceptar" x:Name="btnAceptar" Clicked="btnAceptar_Clicked" BackgroundColor="Green" TextColor="White"/>
+                <Button Text="Atras" x:Name="btnAtras" Clicked="btnAtras_Clicked" BackgroundColor="red" TextColor="White"/>
+                <Button Text="Limpiar" x:Name="btnLimpiar" Clicked="btnLimpiar_Clicked" BackgroundColor="blue" TextColor="White"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

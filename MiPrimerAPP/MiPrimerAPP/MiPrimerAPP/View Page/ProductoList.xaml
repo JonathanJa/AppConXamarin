@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title ="{Binding titulo}"
+             x:Class="MiPrimerAPP.View_Page.ProductoList">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <ScrollView>
+                <FlexLayout JustifyContent="SpaceEvenly" AlignItems="Start"  Wrap="Wrap" x:Name="flexContainer">
+                    
+                </FlexLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

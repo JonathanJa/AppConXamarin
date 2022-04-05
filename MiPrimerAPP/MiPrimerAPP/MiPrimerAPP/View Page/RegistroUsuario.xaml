@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.View_Page.RegistroUsuario">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Registrar Usuario" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <BoxView BackgroundColor="Tomato" HeightRequest="3"/>
+                <Grid Margin="5,15,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Text="Nombre" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="0" Keyboard="Text"/>
+                    <Label Grid.Column="0" Grid.Row="1" Text="Apellido Paterno" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="1" Keyboard="Text"/>
+                    <Label Grid.Column="0" Grid.Row="2" Text="Apellido Materno" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="2" Keyboard="Text"/>
+                    <Label Grid.Column="0" Grid.Row="3" Text="Telefono" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="3" Keyboard="Telephone"/>
+                    <Label Grid.Column="0" Grid.Row="4" Text="Correo" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="4" Keyboard="Email"/>
+                    <Label Grid.Column="0" Grid.Row="5" Text="Descripcion" VerticalOptions="Center"/>
+                    <Editor Grid.Column="1" Grid.Row="5" Keyboard="Text" MaxLength="70"/>
+                    <Label Grid.Column="0" Grid.Row="6" Text="Fecha Nacimiento" VerticalOptions="Center"/>
+                    <DatePicker Grid.Column="1" Grid.Row="6" Format="dd/MM/yyyy" MinimumDate="01/01/1950"/>
+                    <Label Grid.Column="0" Grid.Row="7" Text="Sexo" VerticalOptions="Center"/>
+                    <StackLayout Grid.Column="1" Grid.Row="7">
+                        <RadioButton Content="Masculino"/>
+                        <RadioButton Content="Femenino"/>
+                    </StackLayout>
+                    <Label Grid.Column="0" Grid.Row="8" Text="Usuario" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="8" Keyboard="Text"/>
+                    <Label Grid.Column="0" Grid.Row="9" Text="Contraseña" VerticalOptions="Center"/>
+                    <Entry Grid.Column="1" Grid.Row="9" Keyboard="Text" IsPassword="True"/>
+                </Grid>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20">
+                    <Button Text="Registrar" x:Name="btnRegistrar" Background="green" CornerRadius="15"/>
+                    <Button Text="Salir" x:Name="btnSalir" Clicked="btnSalir_Clicked" Background="red" CornerRadius="15"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.View_Page.FormProductos">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout x:Name="limpiarProducto" Margin="5" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Label Text="Nombre"/>
+                <Entry class="Nombre" Text="{Binding oProductoModel.oProductoCLS.nombre}" ClassId="limpiar obligatorio"/>
+                <Label Text="Precio"/>
+                <Entry class="Precio" Keyboard="Numeric" Text="{Binding oProductoModel.oProductoCLS.precio}" ClassId="limpiar obligatorio"/>
+                <Label Text="Categoria"/>
+                <Picker
+                 class="Seleccione Categoria"   
+                ClassId="limpiar obligatorio"    
+                SelectedIndex="0"
+                ItemsSource="{Binding oProductoModel.listaCategoria}"
+                    SelectedItem="{Binding oProductoModel.oProductoCLS.nombrecategoria}"/>
+
+                <Label Text="Marca"/>
+                <Picker
+                class="Seleccione Marca"
+                ClassId="limpiar obligatorio"    
+                SelectedIndex="0"
+                ItemsSource="{Binding oProductoModel.listaMarca}"
+                    SelectedItem="{Binding oProductoModel.oProductoCLS.nombremarca}"/>
+
+                <Label Text="Stock"/>
+                <Entry class="Stock" Keyboard="Numeric" Text="{Binding oProductoModel.oProductoCLS.stock}" ClassId="limpiar obligatorio snu"/>
+                <Image class="Imagen" ClassId="limpiar obligatorio" HeightRequest="150" Source="{Binding oProductoModel.Image}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imagePreviewProducto" Tapped="imagePreviewProducto_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Aceptar" x:Name="btnAceptarProducto" Clicked="btnAceptarProducto_Clicked" BackgroundColor="Green" TextColor="White"/>
+                    <Button Text="Atras" x:Name="btnAtrasProducto" Clicked="btnAtrasProducto_Clicked" BackgroundColor="red" TextColor="White"/>
+                    <Button Text="Limpiar" x:Name="btnLimpiarProducto" Clicked="btnLimpiarProducto_Clicked" BackgroundColor="blue" TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
+            <ActivityIndicator
+                AbsoluteLayout.LayoutBounds=".5,.5" AbsoluteLayout.LayoutFlags="All"
+                IsRunning="{Binding oProductoModel.IsLoadingForm}"
+                />
+        </AbsoluteLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

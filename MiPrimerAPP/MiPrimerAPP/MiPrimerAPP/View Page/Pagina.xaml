@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.View_Page.Pagina">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolBarRegis" Clicked="toolBarRegis_Clicked"  IconImageSource="ic_agregar.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Text="Nombre" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" FontSize="14"/>
+                    <Label Text="Icono" Grid.Column="2" Grid.Row="0"/>
+                </Grid>
+
+
+                <ListView ItemsSource="{Binding oEntityCLS.listaPagina}" 
+                          IsPullToRefreshEnabled="True"
+                          IsRefreshing="{Binding oEntityCLS.IsLoading}"
+                          HasUnevenRows="True" 
+                          Margin="5,0,5,0" 
+                  x:Name="ltsPagina" ItemSelected="ltsPagina_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Eliminar" x:Name="menuEliminar" Clicked="menuEliminar_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding nombre}" Grid.Column="1" Grid.Row="0"/>
+                                    <Label Text="{Binding nombreicono}" Grid.Column="2" Grid.Row="0"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>

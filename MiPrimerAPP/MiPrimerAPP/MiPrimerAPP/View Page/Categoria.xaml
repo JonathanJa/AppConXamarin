@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.View_Page.Categoria">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolBarRegis" Clicked="toolBarRegis_Clicked"  IconImageSource="ic_agregar.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Escribe el nombre de la categoria" x:Name="searchCategoria" 
+                       TextChanged="searchCategoria_TextChanged"/>
+            <ScrollView >
+                <ListView ItemsSource="{Binding oEntityCLS.listaCategoria}" 
+                          IsPullToRefreshEnabled="True"
+                          IsRefreshing="{Binding oEntityCLS.IsLoading}"
+                          HasUnevenRows="True" 
+                          Margin="5,0,5,0" 
+                  x:Name="ltsCategoria" ItemSelected="ltsCategoria_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Eliminar" x:Name="menuEliminar" Clicked="menuEliminar_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="{Binding ListaFotoString}"/>
+                                    <Label Text="{Binding nombre}" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" FontSize="14"/>
+                                    <Label Text="{Binding descripcion}" Grid.Column="1" Grid.Row="1"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+       
+       
+    </ContentPage.Content>
+</ContentPage>

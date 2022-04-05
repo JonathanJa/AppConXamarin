@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Background="black"
+             Title="Login"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiPrimerAPP.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolBarRegis" Clicked="toolBarRegis_Clicked"  IconImageSource="ic_add.png"/>
+    </ContentPage.ToolbarItems>
+<!--El stacklayout sirve para valinear elementos uno debajo de otro
+    padding modifica su tamaño en la aplicacion y el margin crea una separacion externa  
+    -->
+    
+    <StackLayout>
+        <Label 
+            Text="Hola mundo" 
+            TextColor="White"
+            HorizontalTextAlignment="Center"
+            FontSize="20"
+            FontAttributes="Bold"
+            BackgroundColor="Tomato"
+            Margin="5,10,0,0"
+            Padding="0,10,0,10"
+            TextDecorations="Underline"
+            TextTransform="Uppercase"
+            CharacterSpacing="1"
+            />
+
+        <Label
+            Text="&lt;h4> logeate o registrate para ingresar &lt;/4>"
+            TextType="Html"
+            TextColor="White"
+            />
+        <Label
+            Text="Aplicacion echa con:&#10;_Xamarin;&#10;_SqlServer 2004;&#10;_Asp.net Core"
+            TextColor="White"
+            />
+        <StackLayout Orientation="Horizontal" >
+            <Label Text="Este curso es elaborado por Licito Hurol y es el mas detallado en español"
+                   LineBreakMode="TailTruncation"
+                   TextColor="White"
+                   FontSize="10"
+                   VerticalOptions="Center"
+                   x:Name="lblver"/>
+            <Button Text="Ver Mas" TextColor="White" BackgroundColor="Purple" HeightRequest="30" FontSize="10" x:Name="verMas" Clicked="verMas_Clicked"/>
+
+        </StackLayout>
+
+        <Grid BindingContext="{Binding oUsuarioCLS}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Usuario" TextColor="White" Grid.Column="0" Grid.Row="1"/>
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Contra" TextColor="White" Grid.Column="0" Grid.Row="2"/>
+            <Entry Grid.Column="1" Grid.Row="1" FontSize="14"
+                   Placeholder="Escriba su Usuario" PlaceholderColor="White" TextColor="White"
+                   Text="{Binding NombreUsuario}"/>
+            <Entry Grid.Column="1" Grid.Row="2" FontSize="14"
+                   Placeholder="Escruba su contraseña" PlaceholderColor="White" TextColor="White" IsPassword="True"
+                   Text="{Binding Contra}"/>
+
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Loguease al sistema" TextColor="#FED978" HorizontalOptions="Center"/>
+            <StackLayout Grid.Column="0" Grid.Row="3" Orientation="Horizontal" Grid.ColumnSpan="2" HorizontalOptions="Center">
+                <Button Text="Ingresa" TextColor="White" BackgroundColor="Tomato" x:Name="btnIngresa" Clicked="btnIngresa_Clicked"/>
+                <Button Text="Registrarse" TextColor="White" BackgroundColor="Teal" x:Name="BtnRegistrar" Clicked="BtnRegistrar_Clicked" />
+            </StackLayout>
+            
+        </Grid>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Recordar contraseña?" TextColor="White" VerticalOptions="Center"/>
+            <Switch IsToggled="{Binding recordarContra}"/>
+        </StackLayout>
+
+        <Button Text="Asignar" TextColor="White" BackgroundColor="Teal" x:Name="BtnAsignar" Clicked="BtnAsignar_Clicked"  />
+    </StackLayout>
+
+</ContentPage>

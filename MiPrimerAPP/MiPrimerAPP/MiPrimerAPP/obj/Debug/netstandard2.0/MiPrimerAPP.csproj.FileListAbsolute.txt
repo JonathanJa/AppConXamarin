@@ -1,0 +1,34 @@
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\bin\Debug\netstandard2.0\MiPrimerAPP.deps.json
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\bin\Debug\netstandard2.0\MiPrimerAPP.dll
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\bin\Debug\netstandard2.0\MiPrimerAPP.pdb
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\MiPrimerAPP.csproj.AssemblyReference.cache
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\MiPrimerAPP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\Categoria.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\ConsultaProductoCategoria.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\ConsultaProductoMarca.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\Detail.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\FormCategoria.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\FormPersona.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\FormProductos.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\FormTipoUsuario.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\MainPage.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\Menu.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\PaginaPrincipal.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\Persona.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\Producto.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\RegistroUsuario.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\TabbedPagesConsultas.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\TipoUsuario.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\MiPrimerAPP.AssemblyInfoInputs.cache
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\MiPrimerAPP.AssemblyInfo.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\MiPrimerAPP.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\MiPrimerAPP.dll
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\refint\MiPrimerAPP.dll
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\MiPrimerAPP.pdb
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\ref\MiPrimerAPP.dll
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\ProductoList.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\FormPagina.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\Pagina.xaml.g.cs
+C:\Users\Jonathan\source\repos\MiPrimerAPP\MiPrimerAPP\MiPrimerAPP\obj\Debug\netstandard2.0\View Page\Pedido.xaml.g.cs
